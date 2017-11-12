@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alinta Energy | Bhoomi Khanderia</title>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+		    if (xhr.readyState == XMLHttpRequest.DONE) {
+		        console.log(xhr.responseText);
+
+		        var response = $.parseJSON(xhr.responseText);
+
+				$.each( response, function( key, value ) {
+				$('#printvalue').append(key+"<br>"+value + "<br>--->");
+				}); 
+		    }
+		}
+		xhr.open('GET', 'cros.php', true);
+		xhr.send(null);
+
+	</script>
+</head>
+<body>
+	<div id="printvalue"></div>
+</body>
+</html>
