@@ -1,2 +1,2 @@
 # Alinta
-This repo contains the code for Alinta coding test. The code connects to an api and then displays the characters played by actors sorted by movie names.
+This repo contains the code which connects to an api and then displays the character names grouped by particular actor's name and sorted by movie names.
